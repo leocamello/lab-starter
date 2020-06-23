@@ -27,10 +27,10 @@ steps:
   description: You will learn how to create variables using C++
   event: pull_request.synchronize
   actions: # a list of the actions that will occur when the step is triggered by an event
-  - type: gate                            # using the gate action
-    left: '%payload.pull_request.title%'  # get the title from the pull request object inside of the payload
-    operator: ===                         # check for strict equality, see more at https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity
-    right: Add name to README             # this is the expected value
+  - type: gate
+    left: '%payload.pull_request.title%'
+    operator: ===
+    right: Add name to README
     
 # Step 2: EDIT HERE -INTERNAL COMMENT FOR STEP 2
 - title: Control program flow
